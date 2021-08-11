@@ -1,6 +1,6 @@
 $(document).ready(function () {
     const prapath = window.location.origin;
-    const path = `${prapath}/site/newsimako/bidang/`;
+    const path = `${prapath}/bidang/`;
 
     let show_kegiatan = $('#tb_show_kegiatan').DataTable({
         "ajax": `${path}geTK`,

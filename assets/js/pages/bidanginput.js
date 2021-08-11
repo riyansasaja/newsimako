@@ -1,6 +1,6 @@
 $(document).ready(function () {
     let prapath = window.location.origin;
-    const path = `${prapath}/site/newsimako/bidang/`;
+    const path = `${prapath}/bidang/`;
 
 
     // ---start tampil data

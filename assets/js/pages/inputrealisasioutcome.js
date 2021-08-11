@@ -1,6 +1,6 @@
 $(document).ready(function () {
     const prapath = window.location.origin;
-    const path = `${prapath}/site/newsimako/opd/`;
+    const path = `${prapath}/opd/`;
 
     let show_program = $('#show_program').DataTable({
         "ajax": `${path}getprogram`,

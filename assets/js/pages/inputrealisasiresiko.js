@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     const prapath = window.location.origin;
-    const path = `${prapath}/site/newsimako/bidang/`;
+    const path = `${prapath}/bidang/`;
 
     let tb_show_risiko = $('#tb_show_risiko').DataTable({
         "ajax": `${path}get_all_idev`,

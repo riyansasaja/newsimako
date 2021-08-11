@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     const prapath = window.location.origin;
-    const path = `${prapath}/site/newsimako/inspektorat/`;
+    const path = `${prapath}/inspektorat/`;
 
     // tampil data to datatable
     let table = $('#example').DataTable({

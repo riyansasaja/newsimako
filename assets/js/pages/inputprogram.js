@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     //========UPDATE 26.03.21 ========
     const prapath = window.location.origin;
-    const path = `${prapath}/site/newsimako/opd/`;
+    const path = `${prapath}/opd/`;
     //---Tampil data table kegiatan
     let showkegiatan = $('#showkegiatan').DataTable({
         "ajax": `${path}getkegiatan`,
