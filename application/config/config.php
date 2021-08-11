@@ -104,7 +104,7 @@ $config['enable_hooks'] = FALSE;
 
 /*
 |--------------------------------------------------------------------------
-| Class Extension Prefix
+| Class Extension Prefixeeeeerrrrrr
 |--------------------------------------------------------------------------
 |
 | This item allows you to set the filename/classname prefix when extending
