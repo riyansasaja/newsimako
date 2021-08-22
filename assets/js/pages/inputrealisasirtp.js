@@ -1,6 +1,6 @@
 $(document).ready(function () {
     const prapath = window.location.origin;
-    const path = `${prapath}/bidang/`;
+    const path = `${prapath}/minsel/bidang/`;
 
     let show_rtp = $('#tb_show_rtp').DataTable({
         "ajax": `${path}get_all_rtp`,

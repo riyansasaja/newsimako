@@ -1,6 +1,6 @@
 $(document).ready(function () {
     const prapath = window.location.origin;
-    const path = `${prapath}/bidang/`;
+    const path = `${prapath}/minsel/bidang/`;
     let tes = window.location.pathname.split("/").pop()
 
     // tampil data to datatable

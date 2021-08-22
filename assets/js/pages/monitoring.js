@@ -3,7 +3,7 @@ $(document).ready(function () {
 
 
     const prapath = window.location.origin;
-    const path = `${prapath}/dashboard/`;
+    const path = `${prapath}/minsel/dashboard/`;
     console.log(path);
 
     let monitoring_inputan_program = $('#monitoring_inputan_program').DataTable({

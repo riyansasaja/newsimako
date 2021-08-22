@@ -1,7 +1,7 @@
 $(document).ready(function () {
     const path = window.location.origin;
     console.log(path);
-    const url = `${path}/opd/`;
+    const url = `${path}/minsel/opd/`;
 
     //data table start
     let listriwayat = $('#table-listriwayat').DataTable({

@@ -1,6 +1,6 @@
 $(document).ready(function () {
     let prapath = window.location.origin;
-    const path = `${prapath}/bidang/`;
+    const path = `${prapath}/minsel/bidang/`;
 
 
     // ---start tampil data
