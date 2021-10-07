@@ -7,8 +7,9 @@
                 </h6>
                 <select class="form-control" id="monitoring">
                     <option value="all">--Tampilkan Semua--</option>
-                    <option value="m_inputanprogram">Monitoring Target Program/Kegiatan</option>
+                    <option value="m_inputanprogram">Monitoring Program/Kegiatan</option>
                     <option value="m_inputanrisiko">Monitoring Risiko</option>
+                    <option value="m_inputanrisiko">Monitoring Historis Risiko</option>
                     <option value="m_inputanrtp">Monitoring RTP</option>
                     <option value="m_realisasiprogram">Monitoring Realisasi Program/Kegiatan</option>
                     <option value="m_realisasirisiko">Monitoring Realisasi Risiko</option>
@@ -25,7 +26,7 @@
         <div class="col">
             <div class="card shadow mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Monitoring Inputan Program Kegiatan</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Monitoring Program/Kegiatan</h6>
                 </div>
                 <div class="card-body">
                     <table class="table" id="monitoring_inputan_program">
@@ -55,7 +56,7 @@
         <div class="col">
             <div class="card shadow mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Monitoring Inputan Risiko</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Monitoring Risiko</h6>
                 </div>
                 <div class="card-body">
                     <table class="table table-striped" id="monitoring_inputan_risiko">
@@ -85,7 +86,7 @@
         <div class="col">
             <div class="card shadow mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Monitoring Inputan RTP</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Monitoring RTP</h6>
                 </div>
                 <div class="card-body">
                     <table class="table" id="monitoring_inputan_rtp">
@@ -115,7 +116,7 @@
         <div class="col">
             <div class="card shadow mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Monitoring Inputan Realisasi Program</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Monitoring Realisasi Program/Kegiatan</h6>
                 </div>
                 <div class="card-body">
                     <table class="table table-responsive" id="m_realisasi_program">
@@ -147,7 +148,7 @@
         <div class="col">
             <div class="card shadow mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Monitoring Inputan Realisasi Risiko</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Monitoring Realisasi Risiko</h6>
                 </div>
                 <div class="card-body">
                     <table class="table table-responsive" id="m_realisasi_risiko">
@@ -181,7 +182,7 @@
         <div class="col">
             <div class="card shadow mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Monitoring Inputan Realisasi RTP</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Monitoring Realisasi RTP</h6>
                 </div>
                 <div class="card-body">
                     <table class="table table-responsive" id="m_realisasi_rtp">

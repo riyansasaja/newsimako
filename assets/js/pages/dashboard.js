@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
-    const path = window.location.href;
+    // const path = window.location.href;
+    const path = './'
     console.log(path);
 
     // ---tampil data table
