@@ -1,6 +1,9 @@
 $(document).ready(function () {
-    const prapath = window.location.origin;
-    const path = `${prapath}/opd/`;
+
+    var pathArray = window.location.pathname.split( '/' );
+    const base_url = window.location.origin;
+    const prepath = `${base_url}/${pathArray[1]}`;
+    const path = `${prepath}/opd/`;
 
     let show_program = $('#show_program').DataTable({
         "ajax": `${path}getprogram`,

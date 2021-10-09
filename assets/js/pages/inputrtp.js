@@ -1,6 +1,12 @@
 $(document).ready(function () {
-    const prapath = window.location.origin;
-    const path = `${prapath}/bidang/`;
+
+    //ambil base_url
+    var pathArray = window.location.pathname.split( '/' );
+    const base_url = window.location.origin;
+    const prepath = `${base_url}/${pathArray[1]}`;
+    const path = `${prepath}/bidang/`;
+
+    //Ambil data split
     let tes = window.location.pathname.split("/").pop()
 
     //---tampil data

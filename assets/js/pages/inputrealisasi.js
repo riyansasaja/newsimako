@@ -1,6 +1,9 @@
 $(document).ready(function () {
-    const prapath = window.location.origin;
-    const path = `${prapath}/bidang/`;
+
+    var pathArray = window.location.pathname.split( '/' );
+    const base_url = window.location.origin;
+    const prepath = `${base_url}/${pathArray[1]}`;
+    const path = `${prepath}/bidang/`;
 
     let show_kegiatan = $('#tb_show_kegiatan').DataTable({
         "ajax": `${path}geTK`,

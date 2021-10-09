@@ -1,8 +1,11 @@
 $(document).ready(function () {
 
-    //========UPDATE 26.03.21 ========
-    const prapath = window.location.origin;
-    const path = `${prapath}/opd/`;
+    var pathArray = window.location.pathname.split( '/' );
+    const base_url = window.location.origin;
+    const prepath = `${base_url}/${pathArray[1]}`;
+    const path = `${prepath}/opd/`;
+
+    
     //---Tampil data table kegiatan
     let showkegiatan = $('#showkegiatan').DataTable({
         "ajax": `${path}getkegiatan`,

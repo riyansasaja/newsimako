@@ -1,7 +1,10 @@
 $(document).ready(function () {
-    const path = window.location.origin;
-    console.log(path);
-    const url = `${path}/opd/`;
+
+//ambil base_url
+var pathArray = window.location.pathname.split( '/' );
+const base_url = window.location.origin;
+const prepath = `${base_url}/${pathArray[1]}`;
+const path = `${prepath}/opd/`;
 
     //data table start
     let listriwayat = $('#table-listriwayat').DataTable({
