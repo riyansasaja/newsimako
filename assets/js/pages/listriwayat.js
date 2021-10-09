@@ -8,7 +8,7 @@ const path = `${prepath}/opd/`;
 
     //data table start
     let listriwayat = $('#table-listriwayat').DataTable({
-        "ajax": `${url}get_listriwayat/`,
+        "ajax": `${path}get_listriwayat/`,
         "columns": [
             {
                 "data": null, "sortable": false,
@@ -91,7 +91,7 @@ const path = `${prepath}/opd/`;
         const data = listriwayat.row($(this).parents('tr')).data();
         const id = data.id;
         console.log(id);
-        window.location.href = `${url}editlistriwayat/${id}`;
+        window.location.href = `${path}editlistriwayat/${id}`;
 
     });
     //---end
@@ -115,7 +115,7 @@ const path = `${prepath}/opd/`;
 
                 $.ajax({
                     type: "POST",
-                    url: `${url}delete_listriwayat/`,
+                    url: `${path}delete_listriwayat/`,
                     data: {
                         id: id
                     },

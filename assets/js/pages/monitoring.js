@@ -44,6 +44,25 @@ $(document).ready(function () {
         ]
     });
 
+
+    //========UPDATE 09.10.2021=======
+    let monitoring_riwayat_risiko = $('#monitoring_riwayat_risiko').DataTable({
+        "ajax": `${path}get_monitoring_riwayat_risiko`,
+        "columns": [
+            {
+                "data": null, "sortable": false,
+                render: function (data, type, row, meta) {
+                    return meta.row + meta.settings._iDisplayStart + 1;
+                }
+            },
+            { "data": "name" },
+            { "data": "kondisi" },
+            { "data": "kriteria" },
+            { "data": null,
+            "defaultContent": `<a href="javascript:;" id='view' class="badge rounded-pill bg-primary item_view"'>Detail</a>` }
+        ]
+    });
+
     let monitoring_inputan_rtp = $('#monitoring_inputan_rtp').DataTable({
         "ajax": `${path}get_monitoring_inputan_rtp`,
         "columns": [
@@ -142,5 +161,55 @@ $(document).ready(function () {
         }
     });
     //--end
+
+    //=========UPDATE 09.10.2021 ==========
+    //item view - Monitoring_riwayat_risiko
+    $('#monitoring_riwayat_risiko').on('click', '.item_view', function () {
+        let data = monitoring_riwayat_risiko.row($(this).parents('tr')).data();
+        $('#listRiwayatDetailModal').modal('show');
+        let text = `<ul class="list-group">
+        <li class="list-group-item">
+            <h5 class="text-primary">Kondisi</h5>
+            ${data.kondisi}
+        </li>
+        <li class="list-group-item">
+            <h5 class="text-primary">Kriteria</h5>
+            ${data.kriteria}
+        </li>
+        <li class="list-group-item">
+            <h5 class="text-primary">Sebab Uraian</h5>
+            ${data.sebab_uraian}
+        </li>
+        <li class="list-group-item">
+            <h5 class="text-primary">Akibat</h5>
+            ${data.akibat}
+        </li>
+        <li class="list-group-item">
+            <h5 class="text-primary">Saran</h5>
+            ${data.saran}
+        </li>
+        <li class="list-group-item">
+            <h5 class="text-primary">Sumber Data</h5>
+            ${data.sumber_data}
+        </li>
+        <li class="list-group-item">
+            <h5 class="text-primary">Pernyataan Risiko</h5>
+            ${data.pernyataan_resiko}
+        </li>
+        <li class="list-group-item">
+            <h5 class="text-primary">Sebab</h5>
+            ${data.sebab}
+        </li>
+        <li class="list-group-item">
+            <h5 class="text-primary">Dampak</h5>
+            ${data.dampak}
+    </ul>`
+
+        $('#modal-isi').html(text);
+
+
+    });
+
+    //---end
 
 });

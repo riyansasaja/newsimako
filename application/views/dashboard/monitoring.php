@@ -9,7 +9,7 @@
                     <option value="all">--Tampilkan Semua--</option>
                     <option value="m_inputanprogram">Monitoring Program/Kegiatan</option>
                     <option value="m_inputanrisiko">Monitoring Risiko</option>
-                    <option value="m_inputanrisiko">Monitoring Historis Risiko</option>
+                    <option value="m_riwayatrisiko">Monitoring Riwayat Risiko</option>
                     <option value="m_inputanrtp">Monitoring RTP</option>
                     <option value="m_realisasiprogram">Monitoring Realisasi Program/Kegiatan</option>
                     <option value="m_realisasirisiko">Monitoring Realisasi Risiko</option>
@@ -69,6 +69,34 @@
                                 <th scope="col">Risiko</th>
                                 <th scope="col">Sebab</th>
                                 <th scope="col">Dampak</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="show" id="m_riwayatrisiko">
+    <div class="row animate__animated animate__headShake">
+        <!-- Monitoring Input Program -->
+        <div class="col">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Monitoring Riwayat Risiko</h6>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped" id="monitoring_riwayat_risiko">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">OPD</th>
+                                <th scope="col">Kondisi</th>
+                                <th scope="col">Kriteria</th>
+                                <th scope="col">Detail</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -208,3 +236,26 @@
     </div>
 </div>
 <!-- end -->
+
+
+<!-- UPDATE 09.10.2021 -->
+<!-- List Riwayat Modal -->
+
+<div class="modal fade" id="listRiwayatDetailModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-light">
+                <h5 class="modal-title" id="exampleModalLabel">Detail List Riwayat <i class="fas fa-clipboard-list"></i></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </button>
+            </div>
+            <div class="modal-body" id="modal-isi">
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

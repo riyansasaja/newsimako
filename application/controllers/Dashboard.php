@@ -79,18 +79,30 @@ class Dashboard extends CI_Controller
     {
         $this->db->select('*');
         $this->db->from('tb_tujuan_kegiatan');
-        $this->db->join('user', 'tb_tujuan_kegiatan.id_user = user.id');
+        $this->db->join('v_list_user', 'tb_tujuan_kegiatan.id_user = v_list_user.id');
         $this->db->where('tb_tujuan_kegiatan.id_pemkot', $this->session->id_pemkot);
         $this->db->where('tb_tujuan_kegiatan.tahun_anggaran', $this->session->tahun_anggaran);
         $data['data'] =  $this->db->get()->result();
         echo json_encode($data);
     }
+
+    public function get_monitoring_riwayat_risiko()
+    {
+        $this->db->select('*');
+        $this->db->from('tb_riwayat_resiko');
+        $this->db->join('v_list_user', 'tb_riwayat_resiko.id_user = v_list_user.id');
+        $this->db->where('tb_riwayat_resiko.id_pemkot', $this->session->id_pemkot);
+        $data['data'] =  $this->db->get()->result();
+        echo json_encode($data);
+    }
+
+
     public function get_monitoring_inputan_risiko()
     {
         $this->db->select('*');
         $this->db->from('tb_idev');
         $this->db->join('tb_tujuan_kegiatan', 'tb_idev.id_tk = tb_tujuan_kegiatan.id_tk');
-        $this->db->join('user', 'tb_idev.id_atasan = user.id');
+        $this->db->join('v_list_user', 'tb_idev.id_atasan = v_list_user.id');
         $this->db->where('tb_tujuan_kegiatan.id_pemkot', $this->session->id_pemkot);
         $this->db->where('tb_tujuan_kegiatan.tahun_anggaran', $this->session->tahun_anggaran);
         $data['data'] =  $this->db->get()->result();
@@ -102,7 +114,7 @@ class Dashboard extends CI_Controller
         $this->db->from('tb_idev');
         $this->db->join('tb_tujuan_kegiatan', 'tb_idev.id_tk = tb_tujuan_kegiatan.id_tk');
         $this->db->join('tb_rtp', 'tb_idev.id_idev = tb_rtp.id_idev');
-        $this->db->join('user', 'tb_idev.id_atasan = user.id');
+        $this->db->join('v_list_user', 'tb_idev.id_atasan = v_list_user.id');
         $this->db->where('tb_tujuan_kegiatan.id_pemkot', $this->session->id_pemkot);
         $this->db->where('tb_tujuan_kegiatan.tahun_anggaran', $this->session->tahun_anggaran);
         $data['data'] =  $this->db->get()->result();
