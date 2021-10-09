@@ -2,10 +2,10 @@ $(document).ready(function () {
 
 
 
-    const prapath = window.location.origin;
-    // const path = `${prapath}/dashboard/`;
-    const path = './';
-    console.log(path);
+    var pathArray = window.location.pathname.split( '/' );
+    const base_url = window.location.origin;
+    const prepath = `${base_url}/${pathArray[1]}`;
+    const path = `${prepath}/dashboard/`;
 
     let monitoring_inputan_program = $('#monitoring_inputan_program').DataTable({
         "ajax": `${path}get_monitoring_inputan_program`,

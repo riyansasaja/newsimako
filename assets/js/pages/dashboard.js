@@ -1,12 +1,15 @@
 $(document).ready(function () {
 
-    // const path = window.location.href;
-    const path = './'
-    console.log(path);
+    
+    
+    var pathArray = window.location.pathname.split( '/' );
+    const base_url = window.location.origin;
+    const prepath = `${base_url}/${pathArray[1]}`;
+    const path = `${prepath}/dashboard/`;
 
     // ---tampil data table
     let table_dashboard = $('#table_dashboard').DataTable({
-        "ajax": `${path}/get_dashboard`,
+        "ajax": `${path}get_dashboard`,
         "columns": [
             {
                 "data": null, "sortable": false,
@@ -37,7 +40,7 @@ $(document).ready(function () {
     //untuk tampilan chart
     $.ajax({
         type: "GET",
-        url: `${path}/get_dashboard`,
+        url: `${path}get_dashboard`,
         dataType: "json",
         success: function (response) {
             //chart
